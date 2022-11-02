@@ -4,10 +4,10 @@ const colors = ['salmon', 'green', 'red', 'purple'];
 
 
 function onClick() {
-    btn.style.backgroundColor = colors[i];
-    btn.style.color = white;
-
-    i = i >= colors.length - 1 ? 0 : i + 1;
+    for (let i = 0; i > colors.length; i++){
+        btn.style.backgroundColor = colors[i];
+        btn.style.color = white;
+    }
 }
 
 btn.addEventListener('click', onClick)
