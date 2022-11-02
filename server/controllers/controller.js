@@ -7,5 +7,8 @@ module.exports = {
     },
     styles: (req, res) => {
         res.sendFile(path.join(__dirname, "../../public/styles.css"))
+    },
+    script: (req, res) => {
+        res.sendFile(path.join(__dirname, "../../public/index.js"))
     }
 }

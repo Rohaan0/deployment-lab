@@ -12,10 +12,11 @@ app.use(express.json())
 
 app.get
 
-const { home, styles } = require("./controllers/controller.js")
+const { home, styles, script } = require("./controllers/controller.js")
 
 app.get("/", home)
 app.get("/css", styles)
+app.get("/js", script)
 
 const { PORT } = process.env
 
