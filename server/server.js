@@ -15,7 +15,6 @@ app.get
 const { home, script } = require("./controllers/controller.js")
 
 app.get("/", home)
-app.get("/", script)
 
 const { PORT } = process.env
 
