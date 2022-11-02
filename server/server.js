@@ -6,12 +6,13 @@ const path = require('path')
 
 const app = express()
 
+
 app.use(express.json())
-app.use(cors())
+// app.use(cors())
 
 app.get
 
-const { home } = require("./controllers/controller.js")
+const { home, script } = require("./controllers/controller.js")
 
 app.get("/", home)
 app.get("/", script)
