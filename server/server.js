@@ -15,7 +15,7 @@ app.get
 const { home, styles } = require("./controllers/controller.js")
 
 app.get("/", home)
-app.get("/", styles)
+app.get("/css", styles)
 
 const { PORT } = process.env
 
