@@ -1,13 +1,15 @@
 const btn = document.querySelector('button')
 
-const colors = ['salmon', 'green', 'red', 'purple'];
+const colors = ['salmon', 'green', 'red', 'purple', 'blue', 'yellow', 'white', 'grey', 'violet', '#75DF94', '#B84930'];
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
 
 
 function onClick() {
-    for (let i = 0; i > colors.length; i++){
-        btn.style.backgroundColor = colors[i];
+        btn.style.backgroundColor = colors[getRandomInt(colors.length)];
         btn.style.color = white;
-    }
 }
 
 btn.addEventListener('click', onClick)

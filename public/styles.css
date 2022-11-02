@@ -17,3 +17,7 @@ p {
     font-family: fantasy;
     size: 100px;
 }
+
+button {
+    size: 100px;
+}
