@@ -12,7 +12,7 @@ app.use(express.json())
 
 app.get
 
-const { home, script } = require("./controllers/controller.js")
+const { home } = require("./controllers/controller.js")
 
 app.get("/", home)
 
