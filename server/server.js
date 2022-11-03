@@ -41,7 +41,7 @@ app.get('/api/students', (req, res) => {
 app.post('/api/students', (req, res) => {
     let {name} = req.body
 
-    rollbar.info('student named' + name + ' is being added!')
+    rollbar.info('student named ' + name + ' is being added!')
 
     const index = student.findIndex(student => {
         return student === name
