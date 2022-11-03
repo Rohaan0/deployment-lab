@@ -9,6 +9,30 @@ const app = express()
 
 app.use(express.json())
 // app.use(cors())
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: process.env.ROLLBAR_TOKEN,
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+// record a generic message and send it to Rollbar
+rollbar.log('THIS IS A ROLLBACK!')
+
+
+try {
+    thisFunctionDoesNotExist()
+} catch {
+    rollbar.critical(`Whoops looks like someone cant code properly, you should fire the dummy who made this!`)
+}
+
+
+try {
+    anotherNonExistentFunction()
+} catch {
+    rollbar.warning('wow again? really? what a dummy!')
+}
 
 app.get
 
